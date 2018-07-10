@@ -1,6 +1,6 @@
 const execa = require('execa')
 
-const listFiles = 'la -la'
+const listFiles = 'ls -la'
 const profilePath = '~/.bash_profile'
 const cmd = `source ${profilePath} > /dev/null 2>&1; ${listFiles}`
 
