@@ -9,4 +9,9 @@ execa.shell(cmd)
   .then(result => {
     console.log(result.stdout)
   }, console.error)
-
+  .then(() => {
+    execa.shell('ps -ax')
+  })
+  .then(result => {
+    console.log(result.stdout)
+  })
