@@ -1,0 +1,23 @@
+{
+  "name": "test-codeship-basic-execa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/test-codeship-basic-execa.git"
+  },
+  "keywords": [],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com> (https://glebbahmutov.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bahmutov/test-codeship-basic-execa/issues"
+  },
+  "homepage": "https://github.com/bahmutov/test-codeship-basic-execa#readme",
+  "dependencies": {
+    "execa": "0.10.0"
+  }
+}
