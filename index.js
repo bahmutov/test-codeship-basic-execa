@@ -1,10 +1,11 @@
 const execa = require('execa')
 
-// const profilePath = '~/.bash_profile'
-// const cmd = `source #{profilePath} > /dev/null 2>&1; #{ls -la}`
-// const shellEnv = require("shell-env")
+const listFiles = 'la -la'
+const profilePath = '~/.bash_profile'
+const cmd = `source ${profilePath} > /dev/null 2>&1; ${listFiles}`
 
-execa.shell('ls -la')
+console.log('command: %s', cmd)
+execa.shell(cmd)
   .then(result => {
     console.log(result.stdout)
   }, console.error)
