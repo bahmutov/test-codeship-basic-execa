@@ -20,7 +20,7 @@ const printAllProcs = () => {
       return null
     })
     .then(() => {
-      execa('ps -ax')
+      return execa('ps -ax')
     })
     .then((result) => {
       /* eslint-disable no-console */
