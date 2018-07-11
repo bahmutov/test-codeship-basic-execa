@@ -19,7 +19,7 @@
   "homepage": "https://github.com/bahmutov/test-codeship-basic-execa#readme",
   "dependencies": {
     "electron": "1.8.6",
-    "execa": "0.10.0",
+    "execa": "0.8.0",
     "shell-env": "2.0.1"
   }
 }
