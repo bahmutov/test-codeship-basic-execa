@@ -1,4 +1,5 @@
 const execa = require('execa')
+const psTree = require('ps-tree')
 
 const printAllProcs = () => {
   if (!process.env.CODESHIP) {
@@ -33,6 +34,17 @@ const printAllProcs = () => {
       console.log('')
       /* eslint-enable no-console */
       return null
+    })
+    .then(() => {
+      return new Promise((resolve, reject) => {
+        psTree(process.pid, (err, children) => {
+          if (err) {
+            return reject(err)
+          }
+          console.log('process children')
+          console.log(children)
+        })
+      })
     })
   )
 }
