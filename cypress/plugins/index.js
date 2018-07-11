@@ -10,6 +10,21 @@ const printAllProcs = () => {
     .then((result) => {
       /* eslint-disable no-console */
       console.log('')
+      console.log('All running processes tree')
+      console.log('')
+      console.log(result.stdout)
+      console.log('')
+      console.log('end')
+      console.log('')
+      /* eslint-enable no-console */
+      return null
+    })
+    .then(() => {
+      execa('ps -ax')
+    })
+    .then((result) => {
+      /* eslint-disable no-console */
+      console.log('')
       console.log('All running processes')
       console.log('')
       console.log(result.stdout)
