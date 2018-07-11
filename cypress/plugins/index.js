@@ -43,6 +43,7 @@ const printAllProcs = () => {
           }
           console.log('process children')
           console.log(children)
+          resolve(children)
         })
       })
     })
