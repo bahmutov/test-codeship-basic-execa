@@ -12,12 +12,12 @@ execa.shell(cmd)
   .then(result => {
     console.log(result.stdout)
   }, console.error)
-//   .then(() => {
-//     return execa.shell('ps -ax')
-//   })
-//   .then(result => {
-//     console.log(result.stdout)
-//   })
+  .then(() => {
+    return execa.shell('ps -ax')
+  })
+  .then(result => {
+    console.log(result.stdout)
+  })
   .then(() => {
     console.log('quitting app')
     // electron.app.quit()
