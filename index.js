@@ -1,4 +1,4 @@
-const electron = require('electron')
+// const electron = require('electron')
 console.log('started index')
 const execa = require('execa')
 
@@ -20,5 +20,6 @@ execa.shell(cmd)
 //   })
   .then(() => {
     console.log('quitting app')
-    electron.app.quit()
+    // electron.app.quit()
+    process.exit()
   })
