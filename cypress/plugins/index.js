@@ -1,6 +1,10 @@
 const execa = require('execa')
 
 const printAllProcs = () => {
+  if (!process.env.CODESHIP) {
+    return null
+  }
+
   return (
     execa('pstree')
     .then((result) => {
