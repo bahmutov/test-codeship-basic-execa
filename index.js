@@ -3,9 +3,9 @@ console.log('started index')
 const execa = require('execa')
 
 const listFiles = 'ls -la'
-// const profilePath = '~/.bash_profile'
-// const cmd = `source ${profilePath} > /dev/null 2>&1; ${listFiles}`
-const cmd = listFiles
+const profilePath = '~/.bash_profile'
+const cmd = `source ${profilePath} > /dev/null 2>&1; ${listFiles}`
+// const cmd = listFiles
 
 console.log('command: %s', cmd)
 execa.shell(cmd)
